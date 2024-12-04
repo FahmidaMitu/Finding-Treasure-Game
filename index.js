@@ -1,3 +1,13 @@
+//Create Restart Button and Game over paragraph.
+function createBtn(str) {
+  return `        
+  <p class="fw-bold text-danger fs-4">Game Over</p>
+  <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`
+}
+//To restart the game.
+function restartGame (){
+  location.reload();
+}
 //Function to choose button.
 function startGame(choice){
   //define html game to display the functionality.
@@ -13,23 +23,19 @@ function startGame(choice){
       } else if (choice === 'right'){
         game.innerHTML = `
         <p class="fw-bold">Fall into a hole.</p>
-        <p class="fw-bold text-danger">Game Over</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;
+        ${createBtn()}`;
       }else if (choice === 'anything1'){
         game.innerHTML = `
         <p class="fw-bold">Fall into a hole.</p>
-        <p class="fw-bold text-danger">Game Over</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;  
+        ${createBtn()}`;
       }else if(choice === 'swim'){
         game.innerHTML = `
         <p class="fw-bold">Attacked by trout</p>
-        <p class="fw-bold text-danger">Game Over.</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;  
+        ${createBtn()}`;
       }else if(choice ==='anything2'){
         game.innerHTML =`
         <p class="fw-bold">Attacked by trout</p>
-        <p class="fw-bold text-danger">Game Over.</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;  
+       ${createBtn()}`;
       }else if(choice === 'wait'){
         game.innerHTML =`
         <p class="fw-bold">Which door?</p>
@@ -40,25 +46,18 @@ function startGame(choice){
       }else if(choice === 'red'){
         game.innerHTML = `
         <p class="fw-bold">Burned by fire.</p>
-        <p class="fw-bold text-danger">Game Over.</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;
+        ${createBtn()}`;
       }else if(choice === 'blue'){
         game.innerHTML = `
         <p class="fw-bold">Eaten by beasts</p>
-        <p class="fw-bold text-danger">Game Over</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;
+        ${createBtn()}`;
       }else if( choice === 'yellow'){
         game.innerHTML = `
-        <p class="fw-bold text-success">You win!</p>
+        <p class="fw-bold text-success fs-4">You win!</p>
         <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`;
       }else if (choice === 'anything3'){
         game.innerHTML =`
-        <p class="fw-bold text-danger">Game Over</p>
-        <button onclick="restartGame()"type="button" class="btn btn-light">Restart</button>`; 
+        ${createBtn()}`; 
       }
     }
-    //To restart the game.
-    function restartGame (){
-      location.reload();
-    }
-   
+    
