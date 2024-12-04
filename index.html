@@ -10,17 +10,17 @@
 <body>
     <section class="container">
         <div>
-            <h1>Welcome to Treasure Island.</h1>
+            <h1 >Welcome to Treasure Island.</h1>
             <p>You mission is to find the treasure.</p>
         </div>
+        <!-- Game display -->
         <div id="game">
-            <p>Left or Right?</p>
-            <button onclick="playgame('left')">Left</button>
-            <button onclick="playgame('right')">Right</button>
-            <button onclick="playgame('anything1')">Anything else</button>
+            <p class="fw-bold">Left or Right?</p>
+            <button onclick="startGame('left')" type="button" class="btn btn-light">Left</button>
+            <button onclick="startGame('right')" type="button" class="btn btn-light">Right</button>
+            <button onclick="startGame('anything1')"type="button" class="btn btn-light">Anything else</button>
         </div>
     </section>
     <script src="./index.js"></script>
-    
 </body>
 </html>
