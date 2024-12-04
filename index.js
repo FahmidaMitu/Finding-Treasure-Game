@@ -30,15 +30,30 @@ function playgame(choice){
         <p>Game Over.</p>
         <button onclick="restartGame()">Restart</button>`;  
       }else if(choice === 'wait'){
-        game.innerHTML = `
+        game.innerHTML =`
         <p>Which door?</p>
-        <button onclick = "red()">Red</button>
-        <button onclick = "blue()">Blue</button>
-        <button onclick = "yellow()">Red</button>
-        <button onclick = "anything3()">Red</button>`
+        <button onclick = "playgame('red')">Red</button>
+        <button onclick = "playgame('blue')">Blue</button>
+        <button onclick = "playgame('yellow')">Yellow</button>
+        <button onclick = "playgame('anything3')">Anything else</button>`;
+      }else if(choice === 'red'){
+        game.innerHTML = `
+        <p>Burned by fire.</p>
+        <p>Game Over.</p>`;
+      }else if(choice === 'blue'){
+        game.innerHTML = `
+        <p>Eaten by beasts</p>
+        <p>Game Over</p>`;
+      }else if( choice === 'yellow'){
+        game.innerHTML = `
+        <p>You win!</p>`;
+      }else if (choice === 'anything3'){
+        game.innerHTML =`
+        <p>Game Over</p>`;
       }
-       
+    }
+    function restartGame (){
+      location.reload();
 
-
-}
+    }
 
